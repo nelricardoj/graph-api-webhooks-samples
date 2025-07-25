@@ -68,4 +68,9 @@ app.post('/threads', function(req, res) {
 });
 
 const port = process.env.PORT || 5000;
-app.listen();
+
+app.listen(port, () => { 
+  console.log('Server is running on port ${port}');
+});
+
+//app.listen();
