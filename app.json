@@ -1,4 +1,15 @@
 {
   "name": "Graph API Webhooks Sample",
-  "repository": "https://github.com/fbsamples/graph-api-webhooks-samples"
+  "repository": "https://github.com/nelricardoj/graph-api-webhooks-samples",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "website": "https://payment-callback-b3dd9d8d3a4d.herokuapp.com/privacy-policy",
+  "success_url": "/"
 }
