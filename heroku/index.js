@@ -67,4 +67,7 @@ app.post('/threads', function(req, res) {
   res.sendStatus(200);
 });
 
-app.listen();
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+  console.log('Server is running on port ${port}');
+});
