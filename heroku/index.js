@@ -11,8 +11,8 @@ var express = require('express');
 var app = express();
 var xhub = require('express-x-hub');
 
-app.set('port', (process.env.PORT || 5000));
-app.listen(app.get('port'));
+//app.set('port', (process.env.PORT || 5000));
+//app.listen(app.get('port'));
 
 app.use(xhub({ algorithm: 'sha1', secret: process.env.APP_SECRET }));
 app.use(bodyParser.json());
@@ -68,9 +68,8 @@ app.post('/threads', function(req, res) {
 });
 
 const port = process.env.PORT || 5000;
-
 app.listen(port, () => { 
-  console.log('Server is running on port');
+  console.log('Server is running on port ${port}');
 });
 
 //app.listen();
