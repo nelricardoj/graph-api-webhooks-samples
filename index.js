@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 // Data deletion endpoint
 app.post('/delete-user-data', (req, res) => {
   const userId = req.body.user_id;
-  console.log(`Received data deletion request for user: ${userId}`);
+  console.log('Received data deletion request for user: ${userId}');
   // TODO: Add logic to delete user data from your database or storage
   res.status(200).send({ status: 'User data deletion initiated.' });
 });
@@ -25,5 +25,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log('Server is running on port ${PORT}');
 });
